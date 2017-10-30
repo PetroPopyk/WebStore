@@ -1,0 +1,37 @@
+@media screen and (min-width: 1300px) {
+    #filter1,#filtImg,#addClick{
+         margin-top: -320px; 
+    }
+
+}
+@media screen and (max-width: 700px){
+        #filter1,#filtImg,#addClick{
+         margin-top: -305px; 
+    }
+    #filter1{
+        width: 130px;
+    }
+    #filtImg{
+        right: 95px;
+    }
+    #addClick{
+      right: 260px;
+    }
+    #log_img{
+        display: none;
+    }
+    .header input{
+        display: none;
+    }
+    .main__text input{
+        width: 90px;
+    }
+    @media screen and (min-width: 480px) {
+    #filtImg{
+        right: 80px;
+    }
+    #addClick{
+      right: 250px;
+    }
+}
+}

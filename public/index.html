@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/resetCss.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <script src="js/angular.min.js"></script>
+<!--    <script src="js/jquery-3.2.1.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/my.js"></script>
+</head>
+
+<body ng-controller='myCtrl1'> <span class="content1"></span>
+    <header class="header">
+        <div class="header__log"> <img src="img/leon_studio_logo_head_side-uai-720x296.png" alt="" id="log_img"> </div>
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item"><a href="#">Home</a></li>
+                <li class="menu__item"><a href="#">Products </a></li>
+                <li class="menu__item"><a href="#">List</a></li>
+                <li class="menu__item"><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <div class="header__search">
+            <input type="text" placeholder="Search...">
+            <input type="button" value="Search" id="search"> </div>
+    </header>
+    <section class="main">
+        <form name='myForm1' novalidate>
+            <div class="main__text">
+                <label>Login
+                    <input type="text" id="txt1" name="myName" ng-model="myName" required>
+                    <p ng-show="myForm1.myName.$touched && myForm1.myName.$invalid">Login is required.</p>
+                </label>
+                <br>
+                <label>Password
+                    <input type="password" id="txt2" required name="myPass" ng-model="myPass">
+                    <p ng-show="myForm1.myPass.$touched && myForm1.myPass.$invalid">Password is required.</p>
+                </label>
+                <br> <a href="#" id="reg">Create account</a>
+                <button id="btn1" ng-disabled="myForm1.$invalid">Click</button>
+            </div>
+        </form>
+        <div class="registr">
+            <h1>Create account</h1>
+            <label>Login
+                <input type="text" id="txt5" ng-model='names'> </label>
+            <br>
+            <label>Password
+                <input type="password" id="txt6" ng-model='passs'> </label>
+            <br>
+            <label>Repeat pass
+                <input type="password" id="txt7"> </label>
+            <br>
+            <label>Number
+                <input type="text" id="txt7" ng-model='phone'> </label>
+            <br>
+            <label>Code
+                <input type="text" id="txt9" ng-model='newCode'> </label>
+            <br>
+            <button id="btn2" ng-click='send2()'>Create</button>
+            <button id="btn2" ng-click='send3()'>Send</button>
+        </div>
+    </section>
+    <section class="content" id="content-slider">
+        <h1 id="welc"></h1>
+        <h1 class="prod">Products:</h1>
+        <div id="block-for-slider">
+            <div id="viewport">
+                <ul id="slidewrapper">
+                    <li class="slide"><img src="img/apple-iphone-7-plus-2016-product-045.jpg" alt="1" class="slide-img"></li>
+                    <li class="slide"><img src="img/bf0f8829-063e-44f4-945f-aca2f580eb61.jpg" alt="2" class="slide-img"></li>
+                    <li class="slide"><img src="img/Xiaomi-Mi-5-official-image_1-1600x900.jpg" alt="3" class="slide-img"></li>
+                    <li class="slide"><img src="img/samsung-galaxy-s8-plus-s8-12.jpg" alt="4" class="slide-img"></li>
+                </ul>
+                <div id="prev-next-btns">
+                    <div id="prev-btn"><img src="img/left-arrow.png" alt=""></div>
+                    <div id="next-btn"><img src="img/left-arrow.png" alt=""></div>
+                </div>
+                <ul id="nav-btns">
+                    <li class="slide-nav-btn"></li>
+                    <li class="slide-nav-btn"></li>
+                    <li class="slide-nav-btn"></li>
+                    <li class="slide-nav-btn"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="content2">
+        <div class="chat">
+            <div class="main2" ng-controler="myCtr">
+                <div class="log">
+                    <h1 id="chatAsk">Ask us:</h1>
+                    <form name='myFormx' novalidate>
+                        <input type="text" placeholder="Enter your nickname..." ng-model='textField0' required>
+                        <br>
+                        <button ng-click='nick()' ng-disabled="myFormx.$invalid">Enter</button> <a id="hideChat">Hide</a> </form>
+                </div>
+                <div class="chatLog">
+                    <p class="chatOn"><img src="img/Image_from_Skype.png" alt="">Chat</p>
+                    <form name='myForm' novalidate class="formx">
+                        <input type="text" ng-model='textField' required placeholder="Enter text here...">
+                        <br>
+                        <button ng-click="EnterText()" ng-disabled="myForm.$invalid">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="prodList">
+            <button id="addClick" ng-click="send()">Add</button> <img src="img/Rafiqul-Hassan-Blogger-Search.ico" id='filtImg'>
+            <input type="text" id="filter1" ng-model="test">
+            <div class="listItem" ng-repeat='a in myWelcome| filter:test track by $index' ng-dblclick="delete(a.id)" ng-click='moreInfo()'> {{a.name}}
+                <br>
+                <br> {{a.price|currency}} </div>
+        </div>
+    </section>
+</body>
+
+</html>

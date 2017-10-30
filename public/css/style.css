@@ -1,0 +1,508 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+    margin-left: -300vh;
+}
+
+#log_img {
+    height: 60px;
+    position: absolute;
+    clip: rect(auto, 60px, auto, auto);
+    top: 2px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu__item a {
+    text-decoration: none;
+    color: coral;
+    font-size: 2em;
+    display: block;
+    padding: 20px 30px;
+}
+
+.menu__item a:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: aliceblue;
+}
+
+.header__search input[type=button] {
+    background: coral;
+    border: none;
+}
+
+.main {
+    height: 100vh;
+    background-image: url(../img/html-color-codes-color-tutorials-hero-00e10b1f.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main__text {
+    font-size: 2.5em;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Abril Fatface';
+    font-style: italic;
+    font-weight: 400;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    border-radius: 3px;
+    background: rgba(255, 255, 200, 0.2);
+}
+
+.main__text input {
+    float: right;
+    background: rgba(255, 255, 255, 0);
+    color: black;
+    border: none;
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+    height: 25px;
+    margin: 2.5px;
+    margin-top: 10px;
+}
+
+#btn1,
+#btn2 {
+    float: right;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    width: 70px;
+    height: 30px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#btn1:hover,
+#btn2:hover {
+    background: rgba(0, 0, 0, 0.7);
+    color: aliceblue;
+}
+
+.content {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.prod {
+    font-size: 2em;
+    color: lightcoral;
+    padding-top: 80px;
+    transform: rotate(270deg);
+    margin-left: -40px;
+    margin-right: -40px;
+    margin-top: -500vh;
+}
+
+.article {
+    width: 25%;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    height: 400px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.article__img {
+    height: 95%;
+    width: 100%;
+}
+
+#search {
+    margin-right: 5px;
+}
+
+
+/*----------------------*/
+
+#block-for-slider {
+    width: 60%;
+    /*	80%*/
+    margin: 0 auto;
+    margin-top: 50px;
+    /*    display: none;*/
+}
+
+#viewport {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    text-align: center;
+    border: 1px rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+#slidewrapper {
+    position: relative;
+    width: calc(100% * 4);
+    transition: 1s;
+    transition-timing-function: cubic-bezier(.67, .01, .23, 1);
+}
+
+#slidewrapper,
+#slidewrapper ul,
+#slidewrapper li {
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    width: calc(100%/4);
+    list-style: none;
+    display: inline;
+    float: left;
+}
+
+.slide-img {
+    width: 100%;
+    border: 1px rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+#prev-btn,
+#next-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: calc(50% - 25px);
+}
+
+#prev-btn:hover,
+#next-btn:hover {
+    cursor: pointer;
+}
+
+#prev-btn {
+    left: 20px;
+}
+
+#prev-btn img {
+    position: absolute;
+    width: 20px;
+    left: 13px;
+    top: 9px;
+}
+
+#next-btn {
+    right: 20px;
+}
+
+#next-btn img {
+    transform: rotate(180deg);
+    position: absolute;
+    width: 20px;
+    left: 17px;
+    top: 9px;
+}
+
+#nav-btns {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.slide-nav-btn {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 3px;
+    box-sizing: border-box;
+}
+
+.slide-nav-btn:hover {
+    cursor: pointer;
+    background: black;
+    border: 1px solid #B73265;
+    box-sizing: border-box;
+}
+
+#content-slider {
+    visibility: hidden;
+}
+
+#reg {
+    font-size: 0.6em;
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 900;
+}
+
+#reg:hover {
+    text-decoration: underline aliceblue;
+    color: black;
+}
+
+#welc {
+    position: absolute;
+    top: 650px;
+    font-size: 2.5em;
+    color: aliceblue;
+    /*    display: none;*/
+}
+
+.registr {
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: -1000px;
+}
+
+.registr h1 {
+    text-align: center;
+}
+
+.registr label {
+    font-size: 0.6em;
+}
+
+#txt5,
+#txt6,
+#txt7,
+#txt9 {
+    float: right;
+    background: rgba(255, 255, 255, 0);
+    color: black;
+    border: none;
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+    height: 25px;
+    margin: 2.5px;
+    margin-top: 10px;
+}
+
+#txt1::placeholder,
+#txt2::placeholder,
+#txt5::placeholder,
+#txt6::placeholder,
+#txt7::placeholder {
+    color: red;
+}
+
+.content2 {
+    height: 110vh;
+    background-image: url(../img/html-color-codes-color-tutorials-hero-00e10b1f.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    visibility: hidden;
+}
+
+.chat {
+    width: 30%;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.log {
+    padding-top: 80px;
+    width: 100%;
+    margin-left: 3px;
+}
+
+.chat input {
+    margin: 3px;
+    background: rgba(255, 255, 255, 0);
+    color: black;
+    border: none;
+    border-bottom: 2px solid white;
+    box-sizing: border-box;
+    height: 25px;
+    margin: 2.5px;
+}
+
+.chatLog {
+    margin: 5px;
+    border: 1px solid aliceblue;
+    border-radius: 4px;
+    width: 100%;
+    height: 300px;
+}
+
+.formx {
+    border: 1px solid aliceblue;
+    border-radius: 4px;
+    margin-top: 90%;
+}
+
+.chat button {
+    margin: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    width: 70px;
+    height: 30px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#chatAsk {
+    margin: 10px;
+    font-family: cursive;
+    font-size: 2em;
+    color: aliceblue;
+    transition: 1s;
+}
+
+.prodList {
+    width: 70%;
+    height: 90%;
+    margin-left: 50px;
+    margin-top: 60px;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.content2 {
+    display: flex;
+}
+
+.listItem {
+    height: 25%;
+    width: 20%;
+    margin: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.listItem:hover {
+    height: 29%;
+    width: 24%;
+    border: 1px solid aliceblue;
+}
+
+#filter1 {
+    position: absolute;
+    margin-top: -320px;
+    background: rgba(255, 255, 255, 0);
+    width: 225px;
+    height: 25px;
+    border: 1px solid aliceblue;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#filtImg {
+    position: absolute;
+    height: 25px;
+    margin-top: -320px;
+    margin-left: 130px;
+}
+
+label>p {
+    color: black;
+    font-size: 0.4em;
+    font-weight: 900;
+    text-align: right;
+}
+
+.chatOn {
+    visibility: hidden;
+    font-size: 2em;
+    position: relative;
+    top: 40%;
+    transition: 1s;
+}
+
+.chatOn:hover {
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.chatOn>img {
+    height: 30px;
+}
+
+#btn1[disabled],
+#btn2[disabled]:hover {
+    cursor: auto;
+    background: rgba(255, 255, 255, 0.5);
+    color: gray;
+}
+
+#addClick {
+    position: absolute;
+    margin-top: -320px;
+    margin-left: -140px;
+    background: rgba(255, 255, 255, 0.5);
+    width: 40px;
+    height: 25px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#addClick:hover {
+    background: rgba(0, 0, 0, 0.7);
+    color: aliceblue;
+}
+
+#deleteClick {
+    position: absolute;
+    margin-top: -250px;
+    margin-left: -200px;
+    background: rgba(255, 255, 255, 0.5);
+    width: 60px;
+    height: 25px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#deleteClick:hover {
+    background: rgba(0, 0, 0, 0.7);
+    color: aliceblue;
+}
+
+#hideChat {
+    visibility: hidden;
+    float: right;
+    font-size: 125%;
+    color: aliceblue;
+    transition: 1s;
+    margin-top: 5px;
+}
+
+#hideChat:hover {
+    color: black;
+    cursor: pointer;
+}

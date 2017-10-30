@@ -1,0 +1,21 @@
+{
+  "name": "server01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "mysql": "^2.14.1",
+    "nodemon": "^1.11.0",
+    "twilio": "^3.6.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "popyk",
+  "license": "ISC"
+}
